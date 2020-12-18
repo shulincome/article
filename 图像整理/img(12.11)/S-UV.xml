@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><User List="0"><List0><FilterDown
+Value="1" Min="1" Max="3" Step="1" Defalut="1" /><Filterup Value="5"
+Min="5" Max="15" Step="1" Defalut="5" /><Depth Value="16" Min="16"
+Max="16" Step="0" Defalut="16" /><TriggerDataMode Value="0" Min="0"
+Max="4" Step="1" Defalut="0" /><TriggerExposureType Value="0" Min="0"
+Max="1" Step="1" Defalut="0" /><TriggerEdgeType Value="0" Min="0" Max="1"
+Step="1" Defalut="0" /><TriggerEndplusCnts Value="2" Min="2" Max="2"
+Step="0" Defalut="2" /><TriggerDelayMS Value="0" Min="0" Max="65535"
+Step="1" Defalut="0" /><TriggerSoftwareSignal Value="0" Min="0" Max="0"
+Step="0" Defalut="0" /><TriggerApply Value="1" Min="0" Max="1" Step="1"
+Defalut="1" /><AnalogGain Value="2" Min="0" Max="10" Step="1" Defalut="2" /><BlackLevel
+Value="30" Min="0" Max="8191" Step="1" Defalut="30" /><FilterState
+Value="1" Min="0" Max="1" Step="1" Defalut="1" /><HdrSlope Value="705"
+Min="0" Max="1024" Step="1" Defalut="400" /><HighShortExp Value="0"
+Min="0" Max="1024" Step="1" Defalut="0" /><LowShortExp Value="2996"
+Min="1" Max="65535" Step="1" Defalut="830" /><SignalER Value="0" Min="0"
+Max="3" Step="1" Defalut="0" /><HistogramEqualizationGamma Value="0"
+Min="0" Max="1" Step="1" Defalut="0" /><HistogramEqualization Value="1"
+Min="0" Max="1" Step="1" Defalut="0" /><FirmwareLevelUp Value="17"
+Min="1" Max="255" Step="1" Defalut="255" /><FirmwareLevelDown Value="12"
+Min="0" Max="254" Step="1" Defalut="0" /><FirmwareAutoLevel Value="1"
+Min="0" Max="1" Step="1" Defalut="0" /><AutoExposure Value="1" Min="0"
+Max="1" Step="1" Defalut="0" /><AeTarget Value="110" Min="60" Max="180"
+Step="1" Defalut="110" /><Contrast Value="128" Min="0" Max="255" Step="1"
+Defalut="128" /><Gamma0 Value="100" Min="20" Max="150" Step="1"
+Defalut="100" /><Sharpness Value="0" Min="0" Max="1" Step="1" Defalut="0" /><FlipMirror
+Value="0" Min="0" Max="7" Step="1" Defalut="0" /><SnapFormat Value="2"
+Min="0" Max="31" Step="1" Defalut="8" /><Resolution Value="0" Min="0"
+Max="3" Step="1" Defalut="0" /><RoiLeft Value="0" Min="0" Max="2044"
+Step="4" Defalut="0" /><RoiRight Value="2047" Min="3" Max="2047" Step="4"
+Defalut="2047" /><RoiTop Value="0" Min="0" Max="2044" Step="4"
+Defalut="0" /><RoiBottom Value="2047" Min="3" Max="2047" Step="4"
+Defalut="2047" /><RoiApply Value="0" Min="0" Max="1" Step="1" Defalut="0" /><PixelClock
+Value="0" Min="0" Max="0" Step="1" Defalut="0" /><FilterDown Value="1"
+Min="1" Max="3" Step="1" Defalut="1" /></List0></User>
