@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+
+<head>
+    <title> drag mouse to draw a rect </title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <style type="text/css">
+        body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            color: #000;
+            overflow-y: scoll;
+            overflow: -moz-scrollbars-vertical;
+        }
+
+        .div {
+            position: absolute;
+            border: 1px dashed blue;
+            width: 0px;
+            height: 0px;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+        }
+
+        .rect {
+            position: absolute;
+            border: 1px solid #CCCCCC;
+            overflow: hidden;
+            background: #EFEFEF;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <script language="javascript">
+
+        var wId = "w";
+        var index = 0;
+        var startX = 0, startY = 0;
+        var flag = false;
+        var rectLeft = "0px", rectTop = "0px", rectHeight = "0px", rectWidth = "0px";
+        document.onmousedown = function (e) {
+            flag = true;
+            try {
+                var evt = window.event || e;
+                var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                var scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
+                startX = evt.clientX + scrollLeft;
+                startY = evt.clientY + scrollTop;
+                index++;
+                var div = document.createElement("div");
+                div.id = wId + index;
+                div.className = "div";
+                div.style.marginLeft = startX + "px";
+                div.style.marginTop = startY + "px";
+                document.body.appendChild(div);
+            } catch (e) {
+                //alert(e);
+            }
+        }
+        document.onmouseup = function () {
+            try {
+                document.body.removeChild($(wId + index));
+                //var div = document.createElement("div");
+                //div.className = "rect";
+                //div.style.marginLeft = rectLeft;
+                //div.style.marginTop = rectTop;
+                //div.style.width = rectWidth;
+                //div.style.height = rectHeight;
+                //document.body.appendChild(div);
+
+
+                var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.setAttribute("style", "width:100%;height:100%;");
+                //svg.setAttribute("viewBox", "0 0 1000 1000");
+                //svg.setAttribute("width", rectWidth);
+                //svg.setAttribute("height", rectHeight);
+                
+                //创建矩形元素并设置属性
+                var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                //rect.setAttribute("x", rectLeft+10);
+                //rect.setAttribute("y", rectTop+10);
+                //rect.setAttribute("width", rectWidth-10);
+                //rect.setAttribute("height", rectHeight-10);
+
+                //window.alert(rectLeft + "," + rectTop);
+
+                rect.setAttribute("x", 100);
+                rect.setAttribute("y", 100);
+                rect.setAttribute("width", "20");
+                rect.setAttribute("height", "20");
+
+                rect.setAttribute("style", "fill:#ff6666;stroke-width:1;stroke:rgb(255,0,0)");
+
+                ////矩形元素绑定鼠标事件实现动态效果
+                //rect.οnmοuseοver = function () {
+                //    this.setAttribute("style", "fill:rgb(225,0,0);stroke-width:1;stroke:rgb(255,102,102)");
+                //}
+                //rect.οnmοuseοut = function () {
+                //    this.setAttribute("style", "fill:#ff6666;stroke-width:1;stroke:rgb(255,0,0)");
+                //}
+
+                svg.appendChild(rect);
+                document.body.appendChild(svg);
+
+            } catch (e) {
+                //alert(e);
+            }
+            flag = false;
+        }
+        document.onmousemove = function (e) {
+            if (flag) {
+                try {
+                    var evt = window.event || e;
+                    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                    var scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
+                    rectLeft = (startX - evt.clientX - scrollLeft > 0 ? evt.clientX + scrollLeft : startX) + "px";
+                    rectTop = (startY - evt.clientY - scrollTop > 0 ? evt.clientY + scrollTop : startY) + "px";
+                    rectHeight = Math.abs(startY - evt.clientY - scrollTop) + "px";
+                    rectWidth = Math.abs(startX - evt.clientX - scrollLeft) + "px";
+                    $(wId + index).style.marginLeft = rectLeft;
+                    $(wId + index).style.marginTop = rectTop;
+                    $(wId + index).style.width = rectWidth;
+                    $(wId + index).style.height = rectHeight;
+                } catch (e) {
+                    //alert(e);
+                }
+            }
+        }
+        var $ = function (id) {
+            return document.getElementById(id);
+        }
+
+    </script>
+
+
+</body>
+
+</html>

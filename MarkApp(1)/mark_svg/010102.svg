@@ -1,0 +1,5 @@
+<svg xmlns = 'http://www.w3.org/2000/svg' width='1000' height='1000' style = 'stroke:red; fill:none; stroke-width: 5;'> 
+	<polyline points='  380.000000, 320.000000  420.000000, 320.000000  '/> 
+ 	<polyline points='  400.000000, 300.000000  400.000000, 400.000000  '/> 
+ 	<path d = 'M350.759612 358.682409 A50.000000 50.000000, 1, 0, 0, 449.240388 358.682409' />  
+</svg> 
