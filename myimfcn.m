@@ -28,10 +28,10 @@ end
 bw = imbinarize(imgray);
 
 src1 = im2uint8(im);
-pos = [79.9612005856517,493.759150805271,1931.05710102489,1037.49341142021];
-imCp1 = imcrop(src1,pos);
+pos = [541.735724743778 574.719619326501 908.556368960468 809.604685212298];
+imCp = imcrop(src1,pos);
 
-results.imCp1 = imCp1;
+results.imCp = imCp;
 
 
 results.imgray = imgray;

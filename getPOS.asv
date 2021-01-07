@@ -1,7 +1,7 @@
 clc;
 clear;
 close all;
-src = imread("G:\学位论文GIT\article\图像整理\330nm\800um\P01260000.tif");
+src = imread("G:\学位论文GIT\article\t\300nm\纯海水\P54110000_imCp1.png");
 [m,n] = size(src);
 figure(1)
 imshow(src)
